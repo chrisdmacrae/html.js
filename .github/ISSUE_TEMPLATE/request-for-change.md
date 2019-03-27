@@ -1,3 +1,12 @@
+---
+name: Request for Change
+about: Request a change to the project (e.g, an API change or feature request)
+title: '[RFC]'
+labels: 'request-for-change'
+assignees: ''
+
+---
+
 ## Use case (user story)
 <!-- 
   Please provide a business/use case for this change.
