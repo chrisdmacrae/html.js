@@ -1,0 +1,15 @@
+{
+  "name": "html.js-example-basic",
+  "version": "1.0.0",
+  "description": "A basic example of how to implement html.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx browser-sync start --config 'bs-config.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chrisdmacrae",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.3"
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HTML.js - Basic example</title>
+    </head>
+    <body>
+        <script type="module">
+            import {html, render} from "./node_modules/@html.js/core/lib/index.mjs";
+
+            const fname = "bob";
+            const lname = "bobby";
+            const numbers = [0,1,2];
+            const { output, template } = html`
+                <div>
+                    Hello ${fname} ${lname}
+                    <my-custom-component-1>
+                        <h1 slot="title">My custom title</h1>
+                        <p slot="body">My custom body</p>
+                        <div>
+                            extra elements go into default slot
+                        </div>
+                    </my-custom-component>
+                </div>
+                <template id="my-custom-component-1">
+                    <div>
+                        <h1 slot="title">Default title</h1>
+                        <p slot="body">Default body</p>
+                        <slot></slot>
+                </template>
+                <template id="my-custom-template"></template>
+            `;
+
+            console.log(output, template);
+
+            document.body.innerHTML = output;
+        </script>
+    </body>
+</html>

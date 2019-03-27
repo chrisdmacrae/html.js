@@ -1,0 +1,24 @@
+{
+  "name": "@html.js/core",
+  "version": "0.1.0",
+  "description": "The core libraries for html.js",
+  "main": "lib/index.mjs",
+  "scripts": {
+    "start": "npm run develop",
+    "build": "npx rollup -c",
+    "develop": "npx rollup -c -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chrisdmacrae",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^1.7.3",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-typescript2": "^0.20.1",
+    "typescript": "^3.3.4000"
+  },
+  "dependencies": {
+    "@types/jsdom": "^12.2.3",
+    "jsdom": "^14.0.0"
+  }
+}

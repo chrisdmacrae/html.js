@@ -1,0 +1,38 @@
+{
+  "name": "html.js",
+  "version": "0.1.0",
+  "description": "A tagged template literal DSL for templating HTML with web standards",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "npm run develop",
+    "build": "npx lerna run build",
+    "develop": "npx lerna run develop",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html",
+    "html",
+    "templates",
+    "html",
+    "templating",
+    "html",
+    "template",
+    "literal",
+    "html",
+    "tagged",
+    "template",
+    "literal",
+    "html",
+    "template",
+    "engine"
+  ],
+  "author": "chrisdmacrae",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.13.1",
+    "rollup": "^1.7.3",
+    "rollup-plugin-typescript": "^1.0.1",
+    "tslib": "^1.9.3",
+    "typescript": "^3.3.4000"
+  }
+}
