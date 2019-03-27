@@ -1,3 +1,12 @@
+---
+name: Bug Report
+about: Report a bug or defect with html.js
+title: '[BUG]'
+labels: 'bug'
+assignees: ''
+
+---
+
 ## Description
 <!--
   Please provide a brief description of what you're proposing
