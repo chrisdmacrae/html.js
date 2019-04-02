@@ -1,7 +1,8 @@
 import { Literal } from "estree";
 import { Part } from "./parts/Part";
 
-// Store template representation in a memory map for re-use
+// Store template representations in a memory map for re-use
+// This will de-dupe across all compiler instances
 const templates = new Map();
 
 /**
@@ -13,7 +14,7 @@ const templates = new Map();
  */
 export const literalFactory = (literals: Literal[], ...expressions: any) => {
   const template = createLiteralTemplate(literals, expressions);
-  const parts = getLiteralParts(expressions);
+  const parts = getLiteralParts(template, expressions);
 
   return {
     template: template,
@@ -68,8 +69,10 @@ const createLiteralTemplateId = (
   return literals.join().concat(String(totalExpressions));
 };
 
-const getLiteralParts = (parts: Part[]) => {
-  return [];
+const getLiteralParts = (template: string, parts: Part[]) => {
+  const attrParts = [];
+  const nodeParts = [];
+  const textParts = [];
 };
 
 export default literalFactory;
