@@ -4,11 +4,14 @@
   "description": "A basic example of how to implement html.js",
   "main": "index.js",
   "scripts": {
-    "start": "npx browser-sync start --config 'bs-config.js'",
+    "start": "npx browser-sync start --config ./bs-config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "chrisdmacrae",
   "license": "MIT",
+  "dependencies": {
+    "html.js": "^0.1.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.26.3"
   }

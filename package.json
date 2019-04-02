@@ -30,9 +30,6 @@
   "license": "MIT",
   "devDependencies": {
     "lerna": "^3.13.1",
-    "rollup": "^1.7.3",
-    "rollup-plugin-typescript": "^1.0.1",
-    "tslib": "^1.9.3",
     "typescript": "^3.3.4000"
   }
 }
