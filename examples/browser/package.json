@@ -1,10 +1,10 @@
 {
-  "name": "literal.js-example-basic",
+  "name": "literal.js-example-browser",
   "version": "1.0.0",
-  "description": "A basic example of how to implement literal.js",
+  "description": "A basic example of how to implement literal.js in the browser",
   "main": "index.js",
   "scripts": {
-    "start": "npx browser-sync start --config ./bs-config.js",
+    "start": "npx serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "chrisdmacrae",
@@ -13,6 +13,6 @@
     "literal.js": "^0.1.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.3"
+    "serve": "^11.0.0"
   }
 }

@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "strict": true,
+    "declaration": true,
     "esModuleInterop": true,
-    "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "removeComments": true,
     "sourceMap": true,
-    "declaration": true
+    "strict": true,
+    "target": "esnext"
   }
 }

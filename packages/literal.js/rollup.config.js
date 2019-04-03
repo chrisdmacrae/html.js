@@ -1,8 +1,14 @@
-import typescript from 'rollup-plugin-typescript2';
+import commonjs from "rollup-plugin-commonjs";
 import resolve from 'rollup-plugin-node-resolve';
+import replace from 'rollup-plugin-replace';
+import {
+  terser
+} from 'rollup-plugin-terser';
+import typescript from 'rollup-plugin-typescript2';
 
 const plugins = [
   resolve(),
+  commonjs(),
   typescript()
 ]
 
@@ -25,6 +31,29 @@ export default [{
         format: 'esm'
       }
     ],
-    plugins: plugins
+    plugins: plugins.concat([
+      replace({
+        "CONTEXT_NODE": true,
+        "CONTEXT_BROWSER": false
+      })
+    ])
+  },
+  {
+    input: 'src/index.ts',
+    output: [{
+        file: 'lib/browser/index.js',
+        format: 'cjs'
+      },
+      {
+        file: 'lib/browser/index.mjs',
+        format: 'esm'
+      }
+    ],
+    plugins: plugins.concat([
+      replace({
+        "CONTEXT_NODE": false,
+        "CONTEXT_BROWSER": true
+      })
+    ])
   }
 ];

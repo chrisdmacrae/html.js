@@ -1,7 +1,7 @@
-import { Part, PartType } from "./Part";
+import { Part, PartType } from "../Part";
 
 export default class AttrPart implements Part {
-  readonly type = PartType["ELEMENT"];
+  readonly type = PartType["ATTRIBUTE"];
   readonly value: unknown;
   readonly expression: any;
 

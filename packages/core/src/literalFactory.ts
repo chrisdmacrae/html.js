@@ -1,5 +1,5 @@
 import { Literal } from "estree";
-import { Part } from "./parts/Part";
+import { Part } from "./Part";
 
 // Store template representations in a memory map for re-use
 // This will de-dupe across all compiler instances
@@ -76,9 +76,7 @@ const createLiteralTemplateId = (
 };
 
 const getLiteralParts = (template: string, parts: Part[]) => {
-  const attrParts = [];
-  const nodeParts = [];
-  const textParts = [];
+  return [];
 };
 
 export default literalFactory;

@@ -1,22 +1,5 @@
-import { DSL } from "@literal.js/core/lib/dsl";
-import { Part } from "@literal.js/core/lib/parts/Part";
+import HTMLDSL from "./dsls/HTML";
 
-export default class HTMLDSL implements DSL {
-  readonly template: string;
-  readonly parts: Part[];
+export const html = HTMLDSL;
 
-  constructor(template: string, parts: Part[]) {
-    this.template = template;
-    this.parts = parts;
-  }
-
-  compile() {
-    return this.createFragement(this.template);
-  }
-
-  private createFragement(template: string) {
-    const frag = document.createRange().createContextualFragment(template);
-
-    return frag;
-  }
-}
+export default html;

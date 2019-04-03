@@ -1,4 +1,4 @@
-import { Part } from "./parts/Part";
+import { Part } from "./Part";
 
 export interface DSL {
   readonly template: string;

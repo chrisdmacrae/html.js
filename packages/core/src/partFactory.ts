@@ -1,4 +1,4 @@
-import { createPart } from "./parts/Part";
+import { createPart } from "./Part";
 import { Literal } from "estree";
 
 /**

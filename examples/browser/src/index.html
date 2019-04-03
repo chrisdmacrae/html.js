@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>literal.js - Basic example</title>
+
+    <!-- Our generated CSS will go here -->
+    <style id="css-output"></style>
+    <style id="css-template-output"></style>
+</head>
+
+<body>
+    <!-- Our generated HTML will go here -->
+    <div id="output"></div>
+    <div id="template-output"></div>
+
+    <script type="module">
+        import {html, css} from "/node_modules/literal.js/lib/browser/index.mjs";
+
+        // Get the target mounts for the HTML and CSS
+        const outputEl = document.querySelector('#output');
+        const templateEl = document.querySelector('#template-output');
+        const cssEl = document.querySelector('#css-output');
+        const cssTemplateEl = document.querySelector('#css-template-output');
+
+        // Setup data for our literals
+        const fname = "bob";
+        const lname = "bobby";
+        const background = {
+            color: "red",
+            fontWeight: 100
+        }
+
+        // Generate output from literals
+        const output = html`
+            <div>
+                Hello ${fname} ${lname}
+            </div>
+        `;
+
+        const template = (fname, lname) => html`
+            <div>
+                Hello ${fname} ${lname}
+            </div>
+        `;
+
+        const cssOutput = css`
+            body {
+                background-color: ${background.color};
+                font-weight: ${background.fontWeight};
+            }
+        `;
+
+        const cssTemplate = (background) => css`
+            body {
+                background-color: ${background.color};
+                font-weight: ${background.fontWeight};
+            }
+        `;
+
+        outputEl.appendChild(output);
+        templateEl.appendChild(template('john', 'doe'));
+        cssEl.textContent = cssOutput;
+        cssTemplateEl.textContent = cssTemplate({
+            color: "blue",
+            fontWeight: 400
+        });
+    </script>
+</body>
+
+</html>
