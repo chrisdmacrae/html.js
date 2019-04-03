@@ -61,6 +61,12 @@ export const createLiteralTemplate = (
  *
  * @param literals The string literals
  * @param totalExpressions The total number of expressions
+ *
+ * TODO: generate a real unique id
+ *       use subtlecrypto in browser
+ *       use alt method in node
+ *
+ *      e.g: <div></div>
  */
 const createLiteralTemplateId = (
   literals: Literal[],

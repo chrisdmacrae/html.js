@@ -1,9 +1,9 @@
 {
-  "name": "@html.js/core",
+  "name": "@literal.js/core",
   "version": "0.1.0",
-  "description": "Core library for html.js",
+  "description": "Core library for literal.js",
   "author": "Chris D. Macrae <hello@chrisdmacrae.com>",
-  "homepage": "https://github.com/chrisdmacrae/html.js#readme",
+  "homepage": "https://github.com/chrisdmacrae/literal.js#readme",
   "license": "MIT",
   "directories": {
     "lib": "lib",

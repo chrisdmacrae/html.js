@@ -1,5 +1,5 @@
-import { DSL } from "@html.js/core/lib/dsl";
-import { Part } from "@html.js/core/lib/parts/Part";
+import { DSL } from "@literal.js/core/lib/dsl";
+import { Part } from "@literal.js/core/lib/parts/Part";
 
 export default class HTMLDSL implements DSL {
   readonly template: string;

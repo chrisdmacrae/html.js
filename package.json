@@ -1,5 +1,5 @@
 {
-  "name": "html.js",
+  "name": "literal.js",
   "version": "0.1.0",
   "description": "A tagged template literal DSL for templating HTML with web standards",
   "main": "lib/index.js",

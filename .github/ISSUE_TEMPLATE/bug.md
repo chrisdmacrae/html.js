@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Report a bug or defect with html.js
+about: Report a bug or defect with literal.js
 title: '[BUG]'
 labels: 'bug'
 assignees: ''
@@ -20,8 +20,8 @@ assignees: ''
    
    E.g:
    
-   Scenario: I am using html.js in the browser
-   Given I import html.js in the browser
+   Scenario: I am using literal.js in the browser
+   Given I import literal.js in the browser
    When I use the `html` import,
    I want the return value to contain the output DOM tree,
       and the return value to contain the generated template
@@ -43,8 +43,8 @@ When ,
   NOTE: your bug will not be reviewed until this information is provided.
 -->
 
-<!-- get this by running html.js --version -->
-**html.js version:** 
+<!-- get this by running literal.js --version -->
+**literal.js version:** 
 <!-- get this by running node --version -->
 **node version:** 
 <!-- get this by running npm --version -->
