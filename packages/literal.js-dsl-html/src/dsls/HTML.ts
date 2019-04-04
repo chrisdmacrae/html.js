@@ -11,12 +11,16 @@ export default class HTMLDSL implements DSL {
   }
 
   compile() {
-    return this.createFragement(this.template);
+    return this.createTemplateEl(this.template);
   }
 
-  private createFragement(template: string) {
-    const frag = document.createRange().createContextualFragment(template);
+  private createTemplateEl(template: string) {
+    const templateEl = document.createElement("template");
 
-    return frag;
+    templateEl.innerHTML = template;
+
+    console.log(templateEl);
+
+    return document.importNode(templateEl.content, true);
   }
 }

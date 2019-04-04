@@ -22,17 +22,4 @@ export const compilerFactory = (DSLInstance: DSL): unknown => {
   };
 };
 
-/**
- * Generates a compiler instance with a virtual DOM
- *
- * @param DSLInstance The DSL the compiler factory uses to generate output
- */
-export const virtualCompilerFactory = (DSLInstance: DSL) => {
-  const jsdom = require("jsdom");
-  const vdom = new jsdom.JSDOM();
-  const window = vdom.window;
-
-  window.compile = compilerFactory(DSLInstance);
-
-  return window.compile;
-};
+export default compilerFactory;

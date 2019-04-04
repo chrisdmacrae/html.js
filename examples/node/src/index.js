@@ -1,10 +1,11 @@
-const { html, css } = require("literal.js");
+const {
+  html,
+  css,
+  setup,
+  teardown
+} = require("literal.js");
 
-(async () => {
-  try {
-    console.log(html);
-    console.log(css);
-  } catch (error) {
-    throw error;
-  }
-})();
+setup();
+const output = html `<div>${"content"}</div>`;
+console.log(Object.keys(output));
+teardown();

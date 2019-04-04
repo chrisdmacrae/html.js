@@ -1,12 +1,18 @@
+export interface Render {
+  element: Node | NodeList | String;
+  target: Element | string;
+}
+
 /**
  *
  * @param element The element(s) to render to the DOM
  * @param target The target element or element selector to inject the element
  *   into
+ * @param window The document window context the render should occur in
  */
-export const render = (
-  element: Node | NodeList | string,
-  target: Element | string
+export const renderFactory = (
+  element: Render["element"],
+  target: Render["target"]
 ) => {
   let el: Element | null;
 
@@ -23,4 +29,4 @@ export const render = (
   return el;
 };
 
-export default render;
+export default renderFactory;
