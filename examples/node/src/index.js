@@ -1,14 +1,10 @@
-const {
-  html,
-  css
-} = require("literal.js");
+const { html, css } = require("literal.js");
 
-const htmlOutput = html `
-  <div>${"string"}</div>
-`
-
-const cssOutput = css `
-  body {
-    background-color: ${"red"};
+(async () => {
+  try {
+    console.log(html);
+    console.log(css);
+  } catch (error) {
+    throw error;
   }
-`;
+})();

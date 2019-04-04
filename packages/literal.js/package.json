@@ -5,8 +5,8 @@
   "author": "Chris D. Macrae <hello@chrisdmacrae.com>",
   "homepage": "https://github.com/chrisdmacrae/literal.js#readme",
   "license": "MIT",
-  "main": "lib/index.js",
-  "module": "lib/index.mjs",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
   "browser": "lib/browser/index",
   "bin": "lib/cli.js",
   "directories": {
@@ -28,6 +28,9 @@
   },
   "bugs": {
     "url": "https://github.com/chrisdmacrae/literal.js/issues"
+  },
+  "dependencies": {
+    "jsdom": "^14.0.0"
   },
   "devDependencies": {
     "@literal.js/core": "^0.1.0",

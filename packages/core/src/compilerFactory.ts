@@ -3,17 +3,12 @@ import literalFactory from "./literalFactory";
 import { Part } from "./Part";
 import DSL from "./dsl";
 
-declare const CONTEXT_BROWSER: boolean;
-declare const CONTEXT_NODE: boolean;
-
-let compilerFactoryForContext;
-
 /**
  * Generates a compile factory for a given DSL
  *
  * @param DSL The DSL the compiler factory uses to generate output
  */
-const compilerFactory = (DSLInstance: DSL): unknown => {
+export const compilerFactory = (DSLInstance: DSL): unknown => {
   const compile = (template: string, parts: Part[]) => {
     const compiler = new DSLInstance(template, parts);
 
@@ -27,21 +22,17 @@ const compilerFactory = (DSLInstance: DSL): unknown => {
   };
 };
 
-if (CONTEXT_BROWSER) {
-  compilerFactoryForContext = compilerFactory;
-}
+/**
+ * Generates a compiler instance with a virtual DOM
+ *
+ * @param DSLInstance The DSL the compiler factory uses to generate output
+ */
+export const virtualCompilerFactory = (DSLInstance: DSL) => {
+  const jsdom = require("jsdom");
+  const vdom = new jsdom.JSDOM();
+  const window = vdom.window;
 
-if (CONTEXT_NODE) {
-  compilerFactoryForContext = async () => {
-    const JSDOM = await import("./vdom/index");
+  window.compile = compilerFactory(DSLInstance);
 
-    const vdom = new JSDOM();
-
-    window = vdom.window;
-    document = window.document;
-
-    return compilerFactory;
-  };
-}
-
-export default compilerFactoryForContext;
+  return window.compile;
+};

@@ -14,14 +14,12 @@
   ],
   "scripts": {
     "start": "npm run develop",
-    "develop": "npx tsc --watch --module esnext",
-    "build": "npx tsc --module esnext",
+    "develop": "npx tsc --watch",
+    "build": "npx tsc",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "dependencies": {
-    "jsdom": "^14.0.0"
-  },
   "devDependencies": {
+    "jsdom": "^14.0.0",
     "parse5": "^5.1.0"
   }
 }
